@@ -7,16 +7,16 @@ const Navbar = () => {
     <Fragment>
       <div className='nav-home'>
         <Link to='/'>
-          <img src={logo} alt='logo' />
+          <img src={logo} className='logo' alt='logo' />
         </Link>
         <Link to='/'>
-          <span>Earth Science Whiz</span>
+          <span>Gaia Games</span>
         </Link>
       </div>
 
       <ul className='nav-links'>
         <li>
-          <Link to='/about'>About</Link>
+          <Link to='/about'>ABOUT</Link>
         </li>
       </ul>
     </Fragment>

@@ -4,9 +4,10 @@ import data from '../data/data'
 
 const Buttons = () => {
   const context = useContext(Context)
-  const { selectedCountriesIndexes, btnHandle, randomCountries } = context
+  const { selectedCountriesIndexes, btnHandle } = context
+
   return (
-    <div className='btn-container'>
+    <div className='buttons-cont'>
       <ul>
         {selectedCountriesIndexes.map((riigiIndeks, index) => (
           <li key={index}>
@@ -16,14 +17,11 @@ const Buttons = () => {
                 btnHandle(e, riigiIndeks)
               }}
             >
-              {data[riigiIndeks].country}
+              {data[riigiIndeks].riik}
             </div>
           </li>
         ))}
       </ul>
-      <div className='btn btn-new-set' onClick={randomCountries}>
-        Next
-      </div>
     </div>
   )
 }

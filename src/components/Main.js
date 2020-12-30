@@ -1,7 +1,9 @@
-import React, { useContext, useEffect } from 'react'
+import React, { Fragment, useContext, useEffect } from 'react'
 import Context from '../context/Context'
 import Image from './Image'
 import Buttons from './Buttons'
+import CorrectBtn from './CorrectBtn'
+import NextBtn from './NextBtn'
 
 const Main = () => {
   const context = useContext(Context)
@@ -13,12 +15,12 @@ const Main = () => {
   }, [])
 
   return (
-    <div>
-      <div className='img-btn-container'>
-        <Image />
-        <Buttons />
-      </div>
-    </div>
+    <Fragment>
+      <Image />
+      <Buttons />
+      <CorrectBtn />
+      <NextBtn />
+    </Fragment>
   )
 }
 

@@ -31,9 +31,10 @@ const State = props => {
     const correctCountry = data[correctCountryIndex].country
     const fileName = data[correctCountryIndex].fileName
     dispatch({
-      type: 'RANDOM_COUNTRIES_SELECTED',
+      type: 'NEXT_BTN_CLICKED',
       randomCountries: valitud,
       btnClicked: false,
+      correctAnswer: null,
       correctCountryIndex,
       correctCountry,
       fileName
@@ -48,7 +49,7 @@ const State = props => {
       correctAnswer = false
     }
     dispatch({
-      type: 'BTN_CLICKED',
+      type: 'COUNTRY_BTN_CLICKED',
       btnClicked: true,
       correctAnswer
     })

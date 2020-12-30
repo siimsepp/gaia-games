@@ -1,5 +1,5 @@
 import './App.css'
-import React, { Fragment } from 'react'
+import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import State from './context/State'
 import Main from './components/Main'
@@ -13,14 +13,14 @@ function App() {
         <div className='navbar'>
           <Navbar />
         </div>
-        <Switch>
-          <Fragment>
-            <div className='container'>
+        <div className='wrapper'>
+          <div className='container'>
+            <Switch>
               <Route exact path='/' component={Main} />
               <Route exact path='/about' component={About} />
-            </div>
-          </Fragment>
-        </Switch>
+            </Switch>
+          </div>
+        </div>
       </BrowserRouter>
     </State>
   )
