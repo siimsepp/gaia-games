@@ -180,6 +180,10 @@ ul {
   text-align: center;
 }
 
+.btn:hover {
+  background-color: #b69c29;
+}
+
 .btn-correct {
   cursor: auto;
   background-color: #4caf50;
@@ -192,7 +196,12 @@ ul {
 }
 
 .btn-new-set {
-  background-color: #ff9800;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.btn-new-set:hover {
+  background-color: #186aad;
 }
 
 .btn-new-set-disabled {

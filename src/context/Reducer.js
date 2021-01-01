@@ -4,7 +4,7 @@ const Reducer = (state, action) => {
       return {
         ...state,
         selectedCountriesIndexes: action.randomCountries,
-        btnClicked: action.btnClicked,
+        countryBtnClicked: action.countryBtnClicked,
         correctAnswer: action.correctAnswer,
         correctCountryIndex: action.correctCountryIndex,
         correctCountry: action.correctCountry,
@@ -13,7 +13,7 @@ const Reducer = (state, action) => {
     case 'COUNTRY_BTN_CLICKED':
       return {
         ...state,
-        btnClicked: action.btnClicked,
+        countryBtnClicked: action.countryBtnClicked,
         correctAnswer: action.correctAnswer
       }
     default:

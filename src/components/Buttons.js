@@ -4,7 +4,7 @@ import data from '../data/data'
 
 const Buttons = () => {
   const context = useContext(Context)
-  const { selectedCountriesIndexes, btnHandle } = context
+  const { selectedCountriesIndexes, countryBtnHandle } = context
 
   return (
     <div className='buttons-cont'>
@@ -12,12 +12,12 @@ const Buttons = () => {
         {selectedCountriesIndexes.map((riigiIndeks, index) => (
           <li key={index}>
             <div
-              className='btn'
+              className='btn waves-effect waves-light blue'
               onClick={e => {
-                btnHandle(e, riigiIndeks)
+                countryBtnHandle(e, riigiIndeks)
               }}
             >
-              {data[riigiIndeks].riik}
+              {data[riigiIndeks].country}
             </div>
           </li>
         ))}
