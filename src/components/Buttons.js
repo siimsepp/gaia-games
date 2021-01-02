@@ -12,7 +12,7 @@ const Buttons = () => {
         {selectedCountriesIndexes.map((riigiIndeks, index) => (
           <li key={index}>
             <div
-              className='btn waves-effect waves-light blue'
+              className='btn'
               onClick={e => {
                 countryBtnHandle(e, riigiIndeks)
               }}

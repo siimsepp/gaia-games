@@ -4,22 +4,44 @@ import Image from './Image'
 import Buttons from './Buttons'
 import CorrectBtn from './CorrectBtn'
 import NextBtn from './NextBtn'
+import Statistics from './Statistics'
+import Start from './Start'
+import Settings from './Settings'
 
 const Main = () => {
   const context = useContext(Context)
-  const { randomCountries } = context
+  const { startBtnClicked, tick, gameEnd, mainVisibility, settingsVisibility } = context
 
   useEffect(() => {
-    randomCountries()
-    // eslint-disable-next-line
-  }, [])
+    const timer = setInterval(() => tick(), 1000)
+    return () => {
+      clearInterval(timer)
+    }
+  })
 
   return (
     <Fragment>
-      <Image />
-      <Buttons />
-      <CorrectBtn />
-      <NextBtn />
+      {mainVisibility && (
+        <Fragment>
+          {gameEnd ? (
+            <Statistics />
+          ) : (
+            <Fragment>
+              {startBtnClicked ? (
+                <Fragment>
+                  <Image />
+                  <Buttons />
+                  <CorrectBtn />
+                  <NextBtn />
+                </Fragment>
+              ) : (
+                <Start />
+              )}
+            </Fragment>
+          )}
+        </Fragment>
+      )}
+      {settingsVisibility && <Settings />}
     </Fragment>
   )
 }

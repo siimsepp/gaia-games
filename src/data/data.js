@@ -2,7 +2,7 @@ const andmed = [
   { country: 'Russia', riik: 'Venemaa', area: '17098246', fileName: 'Russia.png' },
   { country: 'Canada', riik: 'Kanada', area: '9984670', fileName: 'Canada.png' },
   { country: 'China', riik: 'Hiina', area: '9596961', fileName: 'China.png' },
-  { country: 'United States', riik: 'Ameerika Ühendriigid', area: '9525067', fileName: 'United_States.png' },
+  { country: 'United States of America', riik: 'Ameerika Ühendriigid', area: '9525067', fileName: 'United_States.png' },
   { country: 'Brazil', riik: 'Brasiilia', area: '8515767', fileName: 'Brazil.png' },
   { country: 'Australia', riik: 'Austraalia', area: '7692024', fileName: 'Australia.png' },
   { country: 'India', riik: 'India', area: '3287263', fileName: 'India.png' },
