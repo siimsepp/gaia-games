@@ -281,6 +281,10 @@ form input:focus {
   text-align: center;
 }
 
+.status {
+  color: red;
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 1200px) {
